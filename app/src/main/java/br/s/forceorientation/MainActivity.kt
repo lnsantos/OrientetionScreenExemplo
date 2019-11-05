@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         if(savedInstanceState != null){
             // if screen for destroyed, we go recover the value of list
-            // to not louse information of list
+            //            to not louse information of list
             names = savedInstanceState.getStringArrayList("names") as ArrayList<String>
         }
 
