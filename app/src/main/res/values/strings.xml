@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ForceOrientation</string>
+    <string name="app_name">Force Orientation</string>
+    <string name="main_label_name_informe">Type your name here</string>
+    <string name="main_button_add_name">Add new name</string>
 </resources>
