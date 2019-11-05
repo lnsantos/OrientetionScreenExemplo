@@ -2,4 +2,5 @@
     <string name="app_name">Force Orientation</string>
     <string name="main_label_name_informe">Type your name here</string>
     <string name="main_button_add_name">Add new name</string>
+    <string name="main_alert_name_blank_or_invalid_caracter">name informated this value blank or amnount caracter smaller two</string>
 </resources>
