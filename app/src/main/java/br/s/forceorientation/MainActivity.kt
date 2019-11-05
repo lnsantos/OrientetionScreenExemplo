@@ -10,6 +10,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    // arrayListOf is at list mutable
+    // listOf is at list imutable
+
     private var names = arrayListOf<String>()
     private var adapter : ArrayAdapter<String>? = null
 
