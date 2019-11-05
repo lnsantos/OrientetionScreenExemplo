@@ -3,6 +3,7 @@ package br.s.forceorientation
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Adapter
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -19,6 +20,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        if(savedInstanceState != null){
+            // if screen for destroyed, we go recover the value of list
+            // to not louse information of list
+            names = savedInstanceState.getStringArrayList("names") as ArrayList<String>
+        }
 
         adapter = ArrayAdapter(this, android.R.layout.simple_selectable_list_item, names)
         listview.adapter = adapter
@@ -40,6 +47,10 @@ class MainActivity : AppCompatActivity() {
         btn.isEnabled = true
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState?.putStringArrayList("names", names)
+    }
 
 
 }
