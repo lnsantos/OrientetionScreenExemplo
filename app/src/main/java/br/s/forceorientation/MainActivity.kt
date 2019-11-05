@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    // Search about onRetatinCustomNonConfigurationInstance
     // arrayListOf is at list mutable
     // listOf is at list imutable
 
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         outState?.putStringArrayList("names", names)
     }
+
 
 
 }
